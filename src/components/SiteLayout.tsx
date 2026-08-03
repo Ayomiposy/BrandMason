@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
@@ -13,6 +13,17 @@ const nav = [
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
@@ -61,8 +72,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="md:hidden border-b border-border/30 bg-background/95 backdrop-blur-md transition-all duration-300">
-            <nav className="flex flex-col px-6 py-6 gap-5">
+          <div className="md:hidden fixed inset-x-0 bottom-0 top-[121px] bg-background/98 backdrop-blur-lg z-40 transition-all duration-300 overflow-y-auto">
+            <nav className="flex flex-col px-6 py-8 gap-5 h-[calc(100vh-121px)] justify-center max-w-md mx-auto">
               {nav.map((n) => {
                 const active = pathname === n.to;
                 return (

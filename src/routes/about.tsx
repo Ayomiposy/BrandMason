@@ -126,7 +126,7 @@ function About() {
             {directors.map((d) => (
               <div key={d.name} className="border border-border bg-card overflow-hidden flex py-5 px-7 flex-col">
 
-                <img src={d.image} alt={d.name} className="h-70 w-90 mb-4" />
+                <img src={d.image} alt={d.name} className="w-full h-72 object-cover mb-4" />
                 <div className=" flex-1 flex flex-col justify-between">
                   <div>
                     <h4 className="font-semibold text-2xl">{d.name}</h4>

@@ -69,36 +69,37 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
           </button>
         </div>
-
-        {/* Mobile Navigation Drawer */}
-        {isOpen && (
-          <div className="md:hidden fixed inset-x-0 bottom-0 top-[121px] bg-background/98 backdrop-blur-lg z-40 transition-all duration-300 overflow-y-auto">
-            <nav className="flex flex-col px-6 py-8 gap-5 h-[calc(100vh-121px)] justify-center max-w-md mx-auto">
-              {nav.map((n) => {
-                const active = pathname === n.to;
-                return (
-                  <Link
-                    key={n.to}
-                    to={n.to}
-                    onClick={() => setIsOpen(false)}
-                    className={`text-xl font-medium py-2 border-b border-border/10 transition-colors ${active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
-                      }`}
-                  >
-                    {n.label}
-                  </Link>
-                );
-              })}
-              <Link
-                to="/projects"
-                onClick={() => setIsOpen(false)}
-                className="mt-4 bg-ink text-ink-foreground text-center py-4 text-base font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-              >
-                Explore Our Solutions
-              </Link>
-            </nav>
-          </div>
-        )}
       </header>
+
+      {/* Mobile Navigation Drawer */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-x-0 bottom-0 top-[121px] bg-background/98 backdrop-blur-lg z-40 transition-all duration-300 overflow-y-auto">
+          <nav className="flex flex-col px-6 py-8 gap-5 h-[calc(100vh-121px)] justify-center max-w-md mx-auto">
+            {nav.map((n) => {
+              const active = pathname === n.to;
+              return (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-xl font-medium py-2 border-b border-border/10 transition-colors ${active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
+                    }`}
+                >
+                  {n.label}
+                </Link>
+              );
+            })}
+            <Link
+              to="/projects"
+              onClick={() => setIsOpen(false)}
+              className="mt-4 bg-ink text-ink-foreground text-center py-4 text-base font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+            >
+              Explore Our Solutions
+            </Link>
+          </nav>
+        </div>
+      )}
+
       <main className="flex-1">{children}</main>
       <footer className="bg-ink text-ink-foreground/70 mt-auto border-t border-ink-foreground/10">
         <div className="max-w-[90rem] mx-auto w-full px-6 md:px-12 py-6 flex items-center justify-between text-xs tracking-wide">

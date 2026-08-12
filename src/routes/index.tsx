@@ -63,7 +63,7 @@ function Home() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="px-6 md:px-12 pb-16">
+      < section className="px-6 md:px-12 pb-16" >
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="relative border-2 border-primary/60 p-10 md:p-16 grid-bg min-h-[480px] flex flex-col justify-center">
             <span className="absolute -top-2 -left-2 h-4 w-4 border-t-2 border-l-2 border-primary" />
@@ -89,9 +89,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
       {/* Story */}
-      <section className="px-6 md:px-12 py-16">
+      < section className="px-6 md:px-12 py-16" >
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-3">The Story Behind the Name</h2>
           <p className="text-muted-foreground text-lg max-w-3xl mb-10">
@@ -113,10 +113,10 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Disciplines */}
-      <section className="bg-cream-deep px-6 md:px-12 py-20">
+      < section className="bg-cream-deep px-6 md:px-12 py-20" >
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl mb-3">Five Disciplines. One Build.</h2>
           <p className="text-muted-foreground mb-10">Every project is laid course by course — from the structure itself to the story it tells.</p>
@@ -137,10 +137,10 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Advantage */}
-      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30">
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-30" >
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-4">Design and construction,<br />under one roof.</h2>
           <p className="text-ink-foreground/70 max-w-2xl mb-10 leading-relaxed">
@@ -157,10 +157,10 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Trust */}
-      <section className="px-6 md:px-12 py-20">
+      < section className="px-6 md:px-12 py-20" >
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-10">Future-ready and responsible,<br />by design.</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -181,10 +181,10 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Directors */}
-      <section className="px-6 md:px-12 pb-20">
+      < section className="px-6 md:px-12 pb-20" >
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-10">
             Board of <span className="text-primary">Directors</span>
@@ -209,10 +209,10 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Future Ready & Responsible Bottom Form Section */}
-      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30 border-t border-ink-foreground/10">
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-30 border-t border-ink-foreground/10" >
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column */}
@@ -297,7 +297,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
-    </SiteLayout>
+      </section >
+    </SiteLayout >
   );
 }

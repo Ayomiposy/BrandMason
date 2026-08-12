@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 
+
 export const Route = createFileRoute("/projects")({
   component: Projects,
   head: () => ({
@@ -20,30 +21,35 @@ const tabs = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
+    images: [{ url: "/spatial-transformation-1.jpg", alt: "Spatial Transformation 1" }, { url: "/spatial-transformation-2.jpg", alt: "Spatial Transformation 2" }, { url: "/spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
   },
   {
     key: "signage",
     label: "Signage Solutions",
     heading: "Signage Solutions",
     body: "Architectural signage fabrication, precision installation, and ongoing maintenance across every environment.",
+    images: [{ url: "/signage-solution-1.jpg", alt: "Signage Solution image 1" }, { url: "/signage-solution-2.jpg", alt: "Signage Solution image 2" }, { url: "/signage-solution-3.jpg", alt: "Signage Solution image 3" }]
   },
   {
     key: "structural",
     label: "Structural Execution",
     heading: "Structural Execution",
     body: "Commercial renovations, specialized construction, and mobile & static kiosk fabrication delivered end-to-end.",
+    images: [{ url: "/structural-execution-1.jpg", alt: "Structural Execution image 1" }, { url: "/structural-execution-2.jpg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.jpg", alt: "Structural Execution image 3" }]
   },
   {
     key: "experiential",
     label: "Experiential Design",
     heading: "Experiential Design",
     body: "Concept design, custom event fabrication, and on-site installation for memorable brand moments.",
+    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }]
   },
   {
     key: "amplification",
     label: "Brand Amplification",
     heading: "Brand Amplification",
     body: "Out of Home (OOH) advertising, promotional products, and bespoke corporate gifts that scale your presence.",
+    images: [{ url: "/brand-amplification-1.jpg", alt: "Brand Amplification image 1" }, { url: "/brand-amplification-2.jpg", alt: "Brand Amplification image 2" }, { url: "/brand-amplification-3.jpg", alt: "Brand Amplification image 3" }]
   },
 ] as const;
 
@@ -97,8 +103,8 @@ function Projects() {
               <p className="mt-6 text-muted-foreground leading-relaxed max-w-sm">{current.body}</p>
             </div>
             <div className="md:col-span-2 grid grid-cols-3 gap-4">
-              {[0, 1, 2].map((i) => (
-                <div key={i} className="aspect-square bg-cream-deep/60 border border-border" />
+              {current.images.map((img, i) => (
+                <img src={img.url} alt={img.alt} key={i} className="aspect-square bg-cream-deep/60 border border-border" />
               ))}
             </div>
           </div>

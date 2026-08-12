@@ -56,7 +56,7 @@ function About() {
               </div>
             </div>
             {/* Empty div placeholder for About Hero image */}
-            <div className="w-full aspect-[4/3] bg-cream-deep/60 border border-border" />
+            <img src="/structural-execution-2.jpg" alt="About BrandMason" className="w-full aspect-[4/3] bg-cream-deep/60 border border-border" />
           </div>
         </div>
       </section>

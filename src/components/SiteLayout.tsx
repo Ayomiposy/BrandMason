@@ -30,7 +30,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="w-full border-b border-border/30 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-[90rem] mx-auto w-full px-6 md:px-12 py-5 flex items-center justify-between">
           <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-            <img src="/logo.png" alt="BrandMason" width={80} height={80} className="h-20 w-20 object-contain" />
+            <img src="/logo.png" alt="BrandMason" width={80} height={80} className="h-15 w-15 object-contain" />
           </Link>
 
           {/* Desktop Navigation */}

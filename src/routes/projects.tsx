@@ -15,34 +15,45 @@ export const Route = createFileRoute("/projects")({
   }),
 });
 
-const tabs = [
+type Tabs = {
+  key: string;
+  label: string;
+  heading: string;
+  body: string;
+  images: { url: string; alt: string }[];
+  videoUrl?: string;
+}
+
+const tabs: Tabs[] = [
   {
     key: "spatial",
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/spatial-transformation-1.jpg", alt: "Spatial Transformation 1" }, { url: "/spatial-transformation-2.jpg", alt: "Spatial Transformation 2" }, { url: "/spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
+    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation 1" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
+    // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {
     key: "signage",
     label: "Signage Solutions",
     heading: "Signage Solutions",
     body: "Architectural signage fabrication, precision installation, and ongoing maintenance across every environment.",
-    images: [{ url: "/signage-solution-1.jpg", alt: "Signage Solution image 1" }, { url: "/signage-solution-2.jpg", alt: "Signage Solution image 2" }, { url: "/signage-solution-3.jpg", alt: "Signage Solution image 3" }]
+    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpeg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-5.jpg", alt: "Signage Solution image 5" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
   },
   {
     key: "structural",
     label: "Structural Execution",
     heading: "Structural Execution",
     body: "Commercial renovations, specialized construction, and mobile & static kiosk fabrication delivered end-to-end.",
-    images: [{ url: "/structural-execution-1.jpg", alt: "Structural Execution image 1" }, { url: "/structural-execution-2.jpg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.jpg", alt: "Structural Execution image 3" }]
+    images: [{ url: "/structural-execution-1.jpg", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.jpg", alt: "Structural Execution image 3" }]
   },
   {
     key: "experiential",
     label: "Experiential Design",
     heading: "Experiential Design",
     body: "Concept design, custom event fabrication, and on-site installation for memorable brand moments.",
-    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }]
+    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }],
+    videoUrl: "/new-experimental-design-vid.mp4",
   },
   {
     key: "amplification",
@@ -56,6 +67,7 @@ const tabs = [
 function Projects() {
   const [active, setActive] = useState<(typeof tabs)[number]["key"]>("spatial");
   const current = tabs.find((t) => t.key === active)!;
+  console.log("current", current);
   return (
     <SiteLayout>
       {/* Hero */}
@@ -97,15 +109,21 @@ function Projects() {
       {/* Capability block */}
       <section className="px-6 md:px-12 py-20">
         <div className="max-w-[90rem] mx-auto w-full">
-          <div className="grid md:grid-cols-3 gap-10 items-start min-h-[220px]">
+          <div className="flex sm:flex-col md:flex-row justify-between gap-10 lg:gap-20 items-start min-h-[220px]">
             <div>
               <h2 className="text-3xl md:text-5xl font-semibold leading-tight">{current.heading}</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed max-w-sm">{current.body}</p>
             </div>
-            <div className="md:col-span-2 grid grid-cols-3 gap-4">
-              {current.images.map((img, i) => (
-                <img src={img.url} alt={img.alt} key={i} className="aspect-square bg-cream-deep/60 border border-border" />
-              ))}
+            <div>
+              <div className="flex flex-col gap-5g">
+                <div className="md:col-span-2 grid grid-cols-3 gap-4">
+                  {current.images.map((img, i) => (
+                    <img src={img.url} alt={img.alt} key={i} className="aspect-square bg-cream-deep/60 border border-border" />
+                  ))}
+                </div>
+                {current.videoUrl && <video src={current.videoUrl} className="w-full h-full" autoPlay loop muted playsInline />}
+
+              </div>
             </div>
           </div>
         </div>

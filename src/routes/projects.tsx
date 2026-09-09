@@ -121,7 +121,7 @@ function Projects() {
                     <img src={img.url} alt={img.alt} key={i} className="aspect-square bg-cream-deep/60 border border-border" />
                   ))}
                 </div>
-                {current.videoUrl && <video src={current.videoUrl} className="w-full h-full" autoPlay loop muted playsInline />}
+                {current.videoUrl && <video src={current.videoUrl} className="w-full h-full mt-5" autoPlay loop muted playsInline />}
 
               </div>
             </div>

@@ -56,7 +56,7 @@ function About() {
               </div>
             </div>
             {/* Empty div placeholder for About Hero image */}
-            <img src="/structural-execution-2.jpg" alt="About BrandMason" className="w-full aspect-[4/3] bg-cream-deep/60 border border-border" />
+            <img src="/brand-amplification-1.jpg" alt="About BrandMason" className="w-full aspect-[4/3] bg-cream-deep/60 border border-border" />
           </div>
         </div>
       </section>
@@ -75,7 +75,7 @@ function About() {
             </div>
             <div className="p-8 bg-ink text-ink-foreground flex flex-col justify-center min-h-[240px]">
               <p className="text-3xl text-primary mb-4 font-semibold uppercase tracking-wider">MISSION</p>
-              <p className="text-2xl mb-3 leading-snug text-primary-foreground">To deliver high-quality branding, intelligent signage, and renovation and building solutions.</p>
+              <p className="text-2xl mb-3 leading-snug text-primary-foreground">To deliver high-quality branding, intelligent signage, renovation and building solutions.</p>
               <p className="text-ink-foreground/70 leading-relaxed">
                 That enhance brand visibility, transform business spaces, and create lasting impressions.
               </p>
@@ -100,13 +100,13 @@ function About() {
               <p className="text-3xl text-primary mb-4 font-semibold uppercase tracking-wider">THE HOOK</p>
               <p className="text-2xl mb-3 leading-snug">Most agencies either design a brand or construct a space. We seamlessly integrate both.</p>
               <p className="text-ink-foreground/70 leading-relaxed">
-                BrandMason uniquely bridges the gap between creative vision and physical reality. By blending marketing intelligence with architectural precision, we deliver consistent, high-impact environments on time, with zero compromise on quality.
+                BrandMason uniquely bridges the gap between creative vision and physical reality. By blending marketing intelligence with architectural precision, we deliver consistent, high-impact environments on time, with zero compromise on quality that enhance brand visibility, transform business spaces, and create lasting impressions.
               </p>
             </div>
             <div className="p-8 flex flex-col min-h-[280px]">
-              <p className="text-3xl text-primary mb-4 font-semibold uppercase tracking-wider">CORE VALUES</p>
-              <p className="text-ink-foreground/70 mb-6 leading-relaxed">That enhance brand visibility, transform business spaces, and create lasting impressions.</p>
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <p className="text-3xl text-primary font-semibold uppercase tracking-wider">CORE VALUES</p>
+              {/* <p className="text-ink-foreground/70 mb-6 leading-relaxed">That enhance brand visibility, transform business spaces, and create lasting impressions.</p> */}
+              <div className="flex flex-wrap gap-2 mt-6">
                 {["Creativity", "Innovation", "Integrity", "Professionalism", "Customer Satisfaction", "Resilience", "Teamwork"].map((v) => (
                   <span key={v} className="px-4 py-2 border border-ink-foreground/20 text-2xl bg-ink-foreground/5 font-medium">{v}</span>
                 ))}

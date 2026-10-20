@@ -30,7 +30,7 @@ const tabs: Tabs[] = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation 1" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
+    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
     // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {
@@ -38,7 +38,7 @@ const tabs: Tabs[] = [
     label: "Signage Solutions",
     heading: "Signage Solutions",
     body: "Architectural signage fabrication, precision installation, and ongoing maintenance across every environment.",
-    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpeg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-5.jpg", alt: "Signage Solution image 5" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
+    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpeg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
   },
   {
     key: "structural",
@@ -52,15 +52,15 @@ const tabs: Tabs[] = [
     label: "Experiential Design",
     heading: "Experiential Design",
     body: "Concept design, custom event fabrication, and on-site installation for memorable brand moments.",
-    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }],
-    videoUrl: "/new-experimental-design-vid.mp4",
+    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }],
   },
   {
     key: "amplification",
     label: "Brand Amplification",
     heading: "Brand Amplification",
     body: "Out of Home (OOH) advertising, promotional products, and bespoke corporate gifts that scale your presence.",
-    images: [{ url: "/brand-amplification-1.jpg", alt: "Brand Amplification image 1" }, { url: "/brand-amplification-2.jpg", alt: "Brand Amplification image 2" }, { url: "/brand-amplification-3.jpg", alt: "Brand Amplification image 3" }]
+    images: [{ url: "/brand-amplification-1.jpg", alt: "Brand Amplification image 1" }, { url: "/brand-amplification-2.jpg", alt: "Brand Amplification image 2" }, { url: "/brand-amplification-3.jpg", alt: "Brand Amplification image 3" }],
+    videoUrl: "/new-experimental-design-vid.mp4",
   },
 ] as const;
 
@@ -133,7 +133,7 @@ function Projects() {
       <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30">
         <div className="max-w-[90rem] mx-auto w-full min-h-[220px] flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl leading-[1.1] max-w-3xl">
-            Have a signage, renovation or construction project?<br />Let's conduct a detailed review.
+            Have a signage, branding, renovation or construction project?<br />Let's conduct a detailed review.
           </h2>
           <div>
             <Link

@@ -32,7 +32,7 @@ const disciplines = [
   {
     n: "02",
     title: "Signage Solutions",
-    items: ["Architectural signage fabrication", "Precision installation", "Ongoing maintenance"],
+    items: ["Architectural signage fabrication", "Precision installation", "Signage refurbishment & maintenance"],
   },
   {
     n: "03",

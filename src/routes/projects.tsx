@@ -30,7 +30,7 @@ const tabs: Tabs[] = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }],
+    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" }],
     // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {

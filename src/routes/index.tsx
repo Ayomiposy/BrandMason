@@ -43,7 +43,7 @@ const disciplines = [
   {
     n: "04",
     title: "Experiential Design",
-    items: ["Concept design", "Custom event fabrication", "On-site installation"],
+    items: ["Concept design", "Customized event fabrication", "and installation"],
   },
   {
     n: "05",

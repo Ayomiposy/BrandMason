@@ -30,7 +30,7 @@ const tabs: Tabs[] = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" }],
+    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpeg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" },],
     // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {
@@ -38,21 +38,21 @@ const tabs: Tabs[] = [
     label: "Signage Solutions",
     heading: "Signage Solutions",
     body: "Architectural signage fabrication, precision installation, and ongoing maintenance across every environment.",
-    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpeg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
+    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-5.jpeg", alt: "Signage Solution image 5" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
   },
   {
     key: "structural",
     label: "Structural Execution",
     heading: "Structural Execution",
     body: "Commercial renovations, specialized construction, and mobile & static kiosk fabrication delivered end-to-end.",
-    images: [{ url: "/structural-execution-1.jpg", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.jpg", alt: "Structural Execution image 3" }]
+    images: [{ url: "/structural-execution-1.png", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.png", alt: "Structural Execution image 3" }, { url: "/structural-execution-4.png", alt: "Structural Execution image 4" }, { url: "/structural-execution-5.png", alt: "Structural Execution image 5" }]
   },
   {
     key: "experiential",
     label: "Experiential Design",
     heading: "Experiential Design",
-    body: "Concept design, custom event fabrication, and on-site installation for memorable brand moments.",
-    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }],
+    body: "Concept design, customized event fabrication, and on-site installation for memorable brand moments.",
+    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpeg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }],
   },
   {
     key: "amplification",

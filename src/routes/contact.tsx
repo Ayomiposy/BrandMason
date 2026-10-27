@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Socials } from "@/components/socials";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -34,7 +35,7 @@ function Contact() {
       </section>
 
       {/* Content grid */}
-      <section className="px-6 md:px-12 pb-20">
+      <section className="px-6 md:px-12 pb-30">
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Form */}
@@ -112,6 +113,9 @@ function Contact() {
             </div>
           </div>
         </div>
+      </section>
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+        <Socials />
       </section>
     </SiteLayout>
   );

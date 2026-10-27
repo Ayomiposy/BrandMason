@@ -34,3 +34,8 @@ dist-ssr
 
 # Vercel
 .vercel/
+
+# Temporary & system metadata files
+*:Zone.Identifier
+*.TMP
+*~*

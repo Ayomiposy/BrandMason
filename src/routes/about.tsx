@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Socials } from "@/components/socials";
 
 
 export const Route = createFileRoute("/about")({
@@ -145,7 +146,7 @@ function About() {
       </section>
 
       {/* Trust */}
-      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30">
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20">
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-10">Trust, engineered in.</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -165,6 +166,9 @@ function About() {
             </div>
           </div>
         </div>
+      </section>
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+        <Socials />
       </section>
     </SiteLayout>
   );

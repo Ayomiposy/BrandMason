@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Socials } from "@/components/socials";
 
 
 export const Route = createFileRoute("/projects")({
@@ -30,7 +31,7 @@ const tabs: Tabs[] = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpeg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" },],
+    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpeg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" }, { url: "/new-spatial-transformation-5.jpeg", alt: "Spatial Transformation 5" }, { url: "/new-spatial-transformation-6.jpeg", alt: "Spatial Transformation 6" }],
     // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {
@@ -45,7 +46,7 @@ const tabs: Tabs[] = [
     label: "Structural Execution",
     heading: "Structural Execution",
     body: "Commercial renovations, specialized construction, and mobile & static kiosk fabrication delivered end-to-end.",
-    images: [{ url: "/structural-execution-1.png", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.png", alt: "Structural Execution image 3" }, { url: "/structural-execution-4.png", alt: "Structural Execution image 4" }, { url: "/structural-execution-5.png", alt: "Structural Execution image 5" }]
+    images: [{ url: "/structural-execution-1.png", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.png", alt: "Structural Execution image 3" }, { url: "/structural-execution-4.png", alt: "Structural Execution image 4" }, { url: "/structural-execution-5.png", alt: "Structural Execution image 5" }, { url: "/structural-execution-6.jpeg", alt: "Structural Execution image 6" }]
   },
   {
     key: "experiential",
@@ -130,7 +131,7 @@ function Projects() {
       </section>
 
       {/* CTA */}
-      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30">
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20">
         <div className="max-w-[90rem] mx-auto w-full min-h-[220px] flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl leading-[1.1] max-w-3xl">
             Have a signage, branding, renovation or construction project?<br />Let's conduct a detailed review.
@@ -144,6 +145,9 @@ function Projects() {
             </Link>
           </div>
         </div>
+      </section>
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+        <Socials />
       </section>
     </SiteLayout>
   );

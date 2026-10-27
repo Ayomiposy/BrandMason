@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Socials } from "@/components/socials";
 
 
 
@@ -212,7 +213,7 @@ function Home() {
       </section >
 
       {/* Future Ready & Responsible Bottom Form Section */}
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-30 border-t border-ink-foreground/10" >
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20 border-t border-ink-foreground/10" >
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column */}
@@ -297,7 +298,11 @@ function Home() {
             </div>
           </div>
         </div>
+
       </section >
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+        <Socials />
+      </section>
     </SiteLayout >
   );
 }

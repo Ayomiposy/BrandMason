@@ -81,7 +81,7 @@ function OurCapability() {
           </p>
           <div>
             <button className="inline-flex items-center gap-2 mt-8 border border-ink px-8 py-4 text-lg font-semibold hover:bg-ink hover:text-ink-foreground transition-all duration-200 cursor-pointer bg-transparent">
-              Download Corporate Profile PDF <span aria-hidden>→</span>
+              Request For A Company Profile <span aria-hidden>→</span>
             </button>
           </div>
         </div>

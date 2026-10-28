@@ -4,8 +4,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Socials } from "@/components/socials";
 
 
-export const Route = createFileRoute("/projects")({
-  component: Projects,
+export const Route = createFileRoute("/OurCapability")({
+  component: OurCapability,
   head: () => ({
     meta: [
       { title: "Projects — From Blueprint to Built Reality | BrandMason" },
@@ -53,7 +53,7 @@ const tabs: Tabs[] = [
     label: "Experiential Design",
     heading: "Experiential Design",
     body: "Concept design, customized event fabrication, and on-site installation for memorable brand moments.",
-    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpeg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }],
+    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpeg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }, { url: "/experiential-design-6.jpeg", alt: "Experiential Design image 6" }],
   },
   {
     key: "amplification",
@@ -65,10 +65,9 @@ const tabs: Tabs[] = [
   },
 ] as const;
 
-function Projects() {
+function OurCapability() {
   const [active, setActive] = useState<(typeof tabs)[number]["key"]>("spatial");
   const current = tabs.find((t) => t.key === active)!;
-  console.log("current", current);
   return (
     <SiteLayout>
       {/* Hero */}

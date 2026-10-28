@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
+  { to: "/OurCapability", label: "Our Capability" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -53,7 +53,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <Link
-              to="/projects"
+              to="/OurCapability"
               className="bg-ink text-ink-foreground px-5 py-3 text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-200"
             >
               Explore Our Solutions
@@ -90,7 +90,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               );
             })}
             <Link
-              to="/projects"
+              to="/OurCapability"
               onClick={() => setIsOpen(false)}
               className="mt-4 bg-ink text-ink-foreground text-center py-4 text-base font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-200"
             >

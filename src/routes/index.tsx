@@ -201,10 +201,10 @@ function Home() {
                     <p className="text-primary text-[15px] font-medium mt-1">{d.role}</p>
                     {d.sub && <p className="text-base text-muted-foreground mt-2 leading-relaxed">{d.sub}</p>}
                   </div>
-                  <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-muted-foreground font-semibold">
+                  {/* <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-muted-foreground font-semibold">
                     <span>READ BIO</span>
                     <span>+</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

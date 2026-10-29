@@ -4,8 +4,6 @@ import { Socials } from "@/components/socials";
 import { useState } from "react";
 import { Plus } from "lucide-react";
 
-
-
 export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
@@ -35,12 +33,20 @@ const disciplines = [
   {
     n: "02",
     title: "Signage Solutions",
-    items: ["Architectural signage fabrication", "Precision installation", "Signage refurbishment & maintenance"],
+    items: [
+      "Architectural signage fabrication",
+      "Precision installation",
+      "Signage refurbishment & maintenance",
+    ],
   },
   {
     n: "03",
     title: "Structural Execution",
-    items: ["Commercial renovations", "Specialized construction", "Mobile & static kiosk fabrication"],
+    items: [
+      "Commercial renovations",
+      "Specialized construction",
+      "Mobile & static kiosk fabrication",
+    ],
     dark: true,
   },
   {
@@ -56,21 +62,43 @@ const disciplines = [
 ];
 
 const directors = [
-  { name: "Temitayo Ogunkoya", role: "Managing Director", sub: "", image: "/temitope.jpg", bio: "Temitayo Ogunkoya is a graduate of the University of Lagos with a Bachelor of Science degree in Economics. She also holds a Masters degree in Human Resource Management from Middlesex University, London and a Master's in Business Administration (MBA).  She has worked in the banking sector and more recently in the Brand & Marketing Communications industry for over 10 years." },
-  { name: "Sammy Ogunjimi", role: "Board of Directors", sub: "Group Managing Director, Codix Group", image: "/sammy.jpg", bio: "Group Managing Director of Codix Group; a visionary leader and business luminary who leverages his strategic acumen to drive organizational growth, innovation, and profitability across a diverse continental portfolio while propelling the company to the forefront of the pharmaceutical industry." },
-  { name: "Mopelola Abudu", role: "Board of Directors", sub: "Managing Partner, AfriGloCal Venture Capital", image: "/mopelola.jpg", bio: "Managing Partner of AfriGloCal Venture Capital; seasoned business strategist with over 25 years of experience who leverages her extensive background in investment, digital transformation, and gender-lens funding to scale African startups and indigenous businesses for global impact." },
-  { name: "Funmilayo Ajomale", role: "Board of Directors", sub: "Corporate Commercial Lawyer & Legal Strategist", image: "/funmilayo.jpg", bio: "Astute corporate commercial lawyer and legal strategist with over 20 years of experience who skillfully blends business management with legal expertise to design risk management methodologies, lead highperforming teams, and drive strategic organizational growth." },
+  {
+    name: "Temitayo Ogunkoya",
+    role: "Managing Director",
+    sub: "",
+    image: "/temitope.jpg",
+    bio: "Temitayo Ogunkoya is a graduate of the University of Lagos with a Bachelor of Science degree in Economics. She also holds a Masters degree in Human Resource Management from Middlesex University, London and a Master's in Business Administration (MBA).  She has worked in the banking sector and more recently in the Brand & Marketing Communications industry for over 10 years.",
+  },
+  {
+    name: "Sammy Ogunjimi",
+    role: "Board of Directors",
+    sub: "Group Managing Director, Codix Group",
+    image: "/sammy.jpg",
+    bio: "Group Managing Director of Codix Group; a visionary leader and business luminary who leverages his strategic acumen to drive organizational growth, innovation, and profitability across a diverse continental portfolio while propelling the company to the forefront of the pharmaceutical industry.",
+  },
+  {
+    name: "Mopelola Abudu",
+    role: "Board of Directors",
+    sub: "Managing Partner, AfriGloCal Venture Capital",
+    image: "/mopelola.jpg",
+    bio: "Managing Partner of AfriGloCal Venture Capital; seasoned business strategist with over 25 years of experience who leverages her extensive background in investment, digital transformation, and gender-lens funding to scale African startups and indigenous businesses for global impact.",
+  },
+  {
+    name: "Funmilayo Ajomale",
+    role: "Board of Directors",
+    sub: "Corporate Commercial Lawyer & Legal Strategist",
+    image: "/funmilayo.jpg",
+    bio: "Astute corporate commercial lawyer and legal strategist with over 20 years of experience who skillfully blends business management with legal expertise to design risk management methodologies, lead highperforming teams, and drive strategic organizational growth.",
+  },
 ];
 
 function Home() {
-
-  const [activeDirector, setActiveDirector] = useState<string | null>(null)
-
+  const [activeDirector, setActiveDirector] = useState<string | null>(null);
 
   return (
     <SiteLayout>
       {/* Hero */}
-      < section className="px-6 md:px-12 pb-16" >
+      <section className="px-6 md:px-12 pb-16">
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="relative border-2 border-primary/60 p-10 md:p-16 grid-bg min-h-[480px] flex flex-col justify-center">
             <span className="absolute -top-2 -left-2 h-4 w-4 border-t-2 border-l-2 border-primary" />
@@ -78,13 +106,17 @@ function Home() {
             <span className="absolute -bottom-2 -left-2 h-4 w-4 border-b-2 border-l-2 border-primary" />
             <span className="absolute -bottom-2 -right-2 h-4 w-4 border-b-2 border-r-2 border-primary" />
             <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] max-w-3xl">
-              Creating Brands,<br />Shaping Spaces.
+              Crafting Brands,
+              <br />
+              Shaping Spaces.
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-xl">Your space is your most powerful brand asset.</p>
+            <p className="mt-6 text-lg text-foreground/80 max-w-xl">
+              Your space is your most powerful brand asset.
+            </p>
             <p className="mt-4 text-muted-foreground max-w-xl leading-relaxed">
-              At BrandMason Limited, we turn ideas into experiences people can see, feel, and remember. We are a branding
-              and architectural solutions company helping businesses bring their brands to life through impactful spaces
-              and environments.
+              At BrandMason Limited, we turn ideas into experiences people can see, feel, and
+              remember. We are a branding and architectural solutions company helping businesses
+              bring their brands to life through impactful spaces and environments.
             </p>
             <div>
               <Link
@@ -96,43 +128,46 @@ function Home() {
             </div>
           </div>
         </div>
-      </section >
+      </section>
       {/* Story */}
-      < section className="px-6 md:px-12 py-16" >
+      <section className="px-6 md:px-12 py-16">
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl font-semibold mb-3">The Story Behind the Name</h2>
           <p className="text-muted-foreground text-lg max-w-3xl mb-10">
-            Great brands, like great buildings, are not assembled — they are built. Built by a mason: someone who works
-            with craftsmanship, intention, and precision, one deliberate course at a time.
+            Great brands, like great buildings, are not assembled — they are built. Built by a
+            mason: someone who works with craftsmanship, intention, and precision, one deliberate
+            course at a time.
           </p>
           <div className="grid md:grid-cols-2 gap-0 border border-border">
             <div className="p-8 bg-card flex flex-col justify-center min-h-[220px]">
               <h3 className="text-primary text-5xl mb-3">Brand</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Brand is identity. It is perception, visibility, storytelling, and how a business is experienced.
+                Brand is identity. It is perception, visibility, storytelling, and how a business is
+                experienced.
               </p>
             </div>
             <div className="p-8 bg-ink text-ink-foreground flex flex-col justify-center min-h-[220px]">
               <h3 className="text-primary text-5xl mb-3">Mason</h3>
               <p className="text-ink-foreground/70 leading-relaxed">
-                Mason is craftsmanship. It is precision, structure, construction, and flawless execution.
+                Mason is craftsmanship. It is precision, structure, construction, and flawless
+                execution.
               </p>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Disciplines */}
-      < section className="bg-cream-deep px-6 md:px-12 py-20" >
+      <section className="bg-cream-deep px-6 md:px-12 py-20">
         <div className="max-w-[90rem] mx-auto w-full">
           <h2 className="text-3xl md:text-5xl mb-3">Five Disciplines. One Build.</h2>
-          <p className="text-muted-foreground mb-10">Every project is laid course by course — from the structure itself to the story it tells.</p>
+          <p className="text-muted-foreground mb-10">
+            Every project is laid course by course — from the structure itself to the story it
+            tells.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-px bg-border border border-border">
             {disciplines.map((d) => (
-              <div
-                key={d.n}
-                className="p-6 flex flex-col min-h-[280px] bg-card"
-              >
+              <div key={d.n} className="p-6 flex flex-col min-h-[280px] bg-card">
                 <div className={`text-sm mb-3`}>{d.n}</div>
                 <h3 className="font-semibold mb-4 leading-tight text-2xl">{d.title}</h3>
                 <ul className={`text-lg space-y-1.5 mt-auto`}>
@@ -144,51 +179,80 @@ function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Advantage */}
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-30" >
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-30">
         <div className="max-w-[90rem] mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-4">Design and construction,<br />under one roof.</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold mb-4">
+            Design and construction,
+            <br />
+            under one roof.
+          </h2>
           <p className="text-ink-foreground/70 max-w-2xl mb-10 leading-relaxed">
-            Most agencies either design a brand or construct a space. We seamlessly integrate both — blending marketing
-            intelligence with architectural precision to deliver consistent, high-impact environments on time, with zero
-            compromise on quality.
+            Most agencies either design a brand or construct a space. We seamlessly integrate both —
+            blending marketing intelligence with architectural precision to deliver consistent,
+            high-impact environments on time, with zero compromise on quality.
           </p>
           <div>
-            <p className="text-sm text-primary mb-4 font-semibold uppercase tracking-wider">Core Values</p>
+            <p className="text-sm text-primary mb-4 font-semibold uppercase tracking-wider">
+              Core Values
+            </p>
             <div className="flex flex-wrap gap-2">
-              {["Creativity", "Innovation", "Integrity", "Professionalism", "Customer Satisfaction", "Resilience", "Teamwork"].map((v) => (
-                <span key={v} className="px-4 py-2 border border-ink-foreground/20 text-2xl bg-ink-foreground/5 font-medium">{v}</span>
+              {[
+                "Creativity",
+                "Innovation",
+                "Integrity",
+                "Professionalism",
+                "Customer Satisfaction",
+                "Resilience",
+                "Teamwork",
+              ].map((v) => (
+                <span
+                  key={v}
+                  className="px-4 py-2 border border-ink-foreground/20 text-2xl bg-ink-foreground/5 font-medium"
+                >
+                  {v}
+                </span>
               ))}
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Trust */}
-      < section className="px-6 md:px-12 py-20" >
+      <section className="px-6 md:px-12 py-20">
         <div className="max-w-[90rem] mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-10">Future-ready and responsible,<br />by design.</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold mb-10">
+            Future-ready and responsible,
+            <br />
+            by design.
+          </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="border border-border p-8 bg-card flex flex-col justify-center min-h-[220px]">
-              <p className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">SAFETY</p>
+              <p className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">
+                SAFETY
+              </p>
               <h3 className="text-3xl font-semibold mb-3">Built with Care.</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Precision is our blueprint for safety. We equip our master craftsmen and engineers, manage active sites to
-                mitigate client risks, and engineer assets to protect public spaces.
+                Precision is our blueprint for safety. We equip our master craftsmen and engineers,
+                manage active sites to mitigate client risks, and engineer assets to protect public
+                spaces.
               </p>
             </div>
             <div className="border border-border p-8 bg-card flex flex-col justify-center min-h-[220px]">
-              <p className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">SDG</p>
+              <p className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">
+                SDG
+              </p>
               <h3 className="text-3xl font-semibold mb-3">SDG Compliance.</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We align operations with UN Sustainable Development Goals, balancing people, planet, and profit with purpose.
+                We align operations with UN Sustainable Development Goals, balancing people, planet,
+                and profit with purpose.
               </p>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Directors */}
       <section className="px-6 md:px-12 pb-24">
@@ -203,7 +267,8 @@ function Home() {
               </h2>
             </div>
             <p className="text-muted-foreground text-base max-w-md">
-              Strategic leadership driving architectural precision, brand excellence, and sustainable enterprise growth.
+              Strategic leadership driving architectural precision, brand excellence, and
+              sustainable enterprise growth.
             </p>
           </div>
 
@@ -213,15 +278,17 @@ function Home() {
               return (
                 <div
                   key={d.name}
-                  className={`group relative border bg-card transition-all duration-300 ease-out flex flex-col ${isActive
-                    ? "border-primary shadow-xl shadow-primary/10 ring-1 ring-primary/20"
-                    : "border-border hover:border-primary/50 hover:shadow-md"
-                    }`}
+                  className={`group relative border bg-card transition-all duration-300 ease-out flex flex-col ${
+                    isActive
+                      ? "border-primary shadow-xl shadow-primary/10 ring-1 ring-primary/20"
+                      : "border-border hover:border-primary/50 hover:shadow-md"
+                  }`}
                 >
                   {/* Top accent indicator */}
                   <div
-                    className={`absolute top-0 left-0 right-0 h-1 bg-primary transition-all duration-300 origin-left z-10 ${isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
-                      }`}
+                    className={`absolute top-0 left-0 right-0 h-1 bg-primary transition-all duration-300 origin-left z-10 ${
+                      isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    }`}
                   />
 
                   {/* Architectural corner markers (BrandMason signature) */}
@@ -296,10 +363,11 @@ function Home() {
                         {isActive ? "Close Bio" : "Read Bio"}
                       </span>
                       <span
-                        className={`h-6 w-6 rounded-full border flex items-center justify-center transition-all duration-300 ${isActive
-                          ? "border-primary bg-primary text-primary-foreground rotate-45"
-                          : "border-border bg-muted/40 text-muted-foreground group-hover/btn:border-primary group-hover/btn:text-primary group-hover/btn:bg-primary/10"
-                          }`}
+                        className={`h-6 w-6 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                          isActive
+                            ? "border-primary bg-primary text-primary-foreground rotate-45"
+                            : "border-border bg-muted/40 text-muted-foreground group-hover/btn:border-primary group-hover/btn:text-primary group-hover/btn:bg-primary/10"
+                        }`}
                       >
                         <Plus className="h-3.5 w-3.5 transition-transform duration-300" />
                       </span>
@@ -307,17 +375,17 @@ function Home() {
 
                     {/* Smooth Collapsible Bio */}
                     <div
-                      className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${isActive
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0 pointer-events-none"
-                        }`}
+                      className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                        isActive
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                      }`}
                     >
                       <div className="overflow-hidden">
                         <div
-                          className={`pt-4 pb-1 transition-all duration-300 transform ${isActive
-                            ? "translate-y-0 opacity-100"
-                            : "-translate-y-2 opacity-0"
-                            }`}
+                          className={`pt-4 pb-1 transition-all duration-300 transform ${
+                            isActive ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
+                          }`}
                         >
                           <div className="relative border-l-2 border-primary pl-3.5 py-1.5 bg-primary/[0.03]">
                             <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-1.5">
@@ -339,7 +407,7 @@ function Home() {
       </section>
 
       {/* Future Ready & Responsible Bottom Form Section */}
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20 border-t border-ink-foreground/10" >
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20 border-t border-ink-foreground/10">
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column */}
@@ -355,7 +423,9 @@ function Home() {
             {/* Right Column */}
             <div className="bg-card/5 border border-ink-foreground/10 p-8 rounded-sm">
               <h3 className="text-2xl font-semibold mb-2">Let's Build Together</h3>
-              <p className="text-base text-ink-foreground/60 mb-6">Tell us about your project or share details of your site survey request.</p>
+              <p className="text-base text-ink-foreground/60 mb-6">
+                Tell us about your project or share details of your site survey request.
+              </p>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -364,7 +434,9 @@ function Home() {
                 className="space-y-4"
               >
                 <div>
-                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">Full Name</label>
+                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">
+                    Full Name
+                  </label>
                   <input
                     required
                     placeholder="Enter your name"
@@ -372,7 +444,9 @@ function Home() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">Email Address</label>
+                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">
+                    Email Address
+                  </label>
                   <input
                     required
                     type="email"
@@ -381,7 +455,9 @@ function Home() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">Message</label>
+                  <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">
+                    Message
+                  </label>
                   <textarea
                     required
                     rows={4}
@@ -402,33 +478,44 @@ function Home() {
           {/* 4 Info Columns */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-12 border-t border-ink-foreground/10 text-sm">
             <div>
-              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">Phone</p>
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">
+                Phone
+              </p>
               <p className="text-lg font-medium text-ink-foreground/90">09061734096</p>
               <p className="text-lg font-medium text-ink-foreground/90 mt-1">08171991238</p>
             </div>
             <div>
-              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">Email</p>
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">
+                Email
+              </p>
               <p className="text-lg font-medium text-ink-foreground/90 hover:text-primary transition-colors">
                 <a href="mailto:info@brandmasonlimited.com">info@brandmasonlimited.com</a>
               </p>
             </div>
             <div>
-              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">Web</p>
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">
+                Web
+              </p>
               <p className="text-lg font-medium text-ink-foreground/90 hover:text-primary transition-colors">
-                <a href="https://www.brandmasonlimited.com" target="_blank" rel="noreferrer">www.brandmasonlimited.com</a>
+                <a href="https://www.brandmasonlimited.com" target="_blank" rel="noreferrer">
+                  www.brandmasonlimited.com
+                </a>
               </p>
             </div>
             <div>
-              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">Location</p>
-              <p className="text-lg font-medium text-ink-foreground/90">Ikeja, Lagos, West Africa</p>
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-2">
+                Location
+              </p>
+              <p className="text-lg font-medium text-ink-foreground/90">
+                Ikeja, Lagos, West Africa
+              </p>
             </div>
           </div>
         </div>
-
-      </section >
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+      </section>
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10">
         <Socials />
       </section>
-    </SiteLayout >
+    </SiteLayout>
   );
 }

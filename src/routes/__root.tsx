@@ -73,14 +73,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BrandMason — Creating Brands, Shaping Spaces" },
+      { title: "BrandMason — Crafting Brands, Shaping Spaces" },
       {
         name: "description",
         content:
           "BrandMason is a branding and architectural solutions company helping businesses bring their brands to life through impactful spaces and environments.",
       },
       { name: "author", content: "BrandMason" },
-      { property: "og:title", content: "BrandMason — Creating Brands, Shaping Spaces" },
+      { property: "og:title", content: "BrandMason — Crafting Brands, Shaping Spaces" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@brandmason" },
-      { name: "twitter:title", content: "BrandMason — Creating Brands, Shaping Spaces" },
+      { name: "twitter:title", content: "BrandMason — Crafting Brands, Shaping Spaces" },
       {
         name: "twitter:description",
         content:

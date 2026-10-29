@@ -38,7 +38,7 @@ const tabs: Tabs[] = [
     key: "signage",
     label: "Signage Solutions",
     heading: "Signage Solutions",
-    body: "Architectural signage fabrication, precision installation, and ongoing maintenance across every environment.",
+    body: "Architectural signage fabrication, precision installation, signage refurbishment and maintenance across every environment.",
     images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-5.jpeg", alt: "Signage Solution image 5" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
   },
   {
@@ -71,7 +71,7 @@ function OurCapability() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="px-6 md:px-12 py-30 grid-bg bg-cream-deep/60">
+      < section className="px-6 md:px-12 py-30 grid-bg bg-cream-deep/60" >
         <div className="max-w-[90rem] mx-auto w-full min-h-[300px] flex flex-col justify-center">
           <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] max-w-3xl">
             From Blueprint to<br />Built Reality
@@ -85,10 +85,10 @@ function OurCapability() {
             </button>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Tabs */}
-      <nav className="px-6 md:px-12 border-b border-border bg-card">
+      < nav className="px-6 md:px-12 border-b border-border bg-card" >
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="flex flex-wrap gap-8">
             {tabs.map((t) => (
@@ -104,10 +104,10 @@ function OurCapability() {
             ))}
           </div>
         </div>
-      </nav>
+      </nav >
 
       {/* Capability block */}
-      <section className="px-6 md:px-12 py-20">
+      < section className="px-6 md:px-12 py-20" >
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="flex sm:flex-col md:flex-row justify-between gap-10 lg:gap-20 items-start min-h-[220px]">
             <div>
@@ -127,10 +127,10 @@ function OurCapability() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA */}
-      <section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20">
+      < section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20" >
         <div className="max-w-[90rem] mx-auto w-full min-h-[220px] flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl leading-[1.1] max-w-3xl">
             Have a signage, branding, renovation or construction project?<br />Let's conduct a detailed review.
@@ -144,7 +144,7 @@ function OurCapability() {
             </Link>
           </div>
         </div>
-      </section>
+      </section >
       < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
         <Socials />
       </section>

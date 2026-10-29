@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Socials } from "@/components/socials";
+import { useState } from "react";
+import { Plus } from "lucide-react";
 
 
 
@@ -8,13 +10,13 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "BrandMason — Creating Brands, Shaping Spaces" },
+      { title: "BrandMason — Crafting Brands, Shaping Spaces" },
       {
         name: "description",
         content:
           "BrandMason is a branding and architectural solutions company helping businesses bring their brands to life through impactful spaces and environments.",
       },
-      { property: "og:title", content: "BrandMason — Creating Brands, Shaping Spaces" },
+      { property: "og:title", content: "BrandMason — Crafting Brands, Shaping Spaces" },
       {
         property: "og:description",
         content:
@@ -43,8 +45,8 @@ const disciplines = [
   },
   {
     n: "04",
-    title: "Experiential Design",
-    items: ["Concept design", "Customized event fabrication", "and installation"],
+    title: "Experiential Design and Installation",
+    items: ["Concept design", "Customized event fabrications", "Installations"],
   },
   {
     n: "05",
@@ -54,13 +56,17 @@ const disciplines = [
 ];
 
 const directors = [
-  { name: "Temitayo Ogunkoya", role: "Managing Director", sub: "", image: "/temitope.jpg" },
-  { name: "Sammy Ogunjimi", role: "Board of Directors", sub: "Group Managing Director, Codix Group", image: "/sammy.jpg" },
-  { name: "Mopelola Abudu", role: "Board of Directors", sub: "Managing Partner, AfriGloCal Venture Capital", image: "/mopelola.jpg" },
-  { name: "Funmilayo Ajomale", role: "Board of Directors", sub: "Corporate Commercial Lawyer & Legal Strategist", image: "/funmilayo.jpg" },
+  { name: "Temitayo Ogunkoya", role: "Managing Director", sub: "", image: "/temitope.jpg", bio: "Temitayo Ogunkoya is a graduate of the University of Lagos with a Bachelor of Science degree in Economics. She also holds a Masters degree in Human Resource Management from Middlesex University, London and a Master's in Business Administration (MBA).  She has worked in the banking sector and more recently in the Brand & Marketing Communications industry for over 10 years." },
+  { name: "Sammy Ogunjimi", role: "Board of Directors", sub: "Group Managing Director, Codix Group", image: "/sammy.jpg", bio: "Group Managing Director of Codix Group; a visionary leader and business luminary who leverages his strategic acumen to drive organizational growth, innovation, and profitability across a diverse continental portfolio while propelling the company to the forefront of the pharmaceutical industry." },
+  { name: "Mopelola Abudu", role: "Board of Directors", sub: "Managing Partner, AfriGloCal Venture Capital", image: "/mopelola.jpg", bio: "Managing Partner of AfriGloCal Venture Capital; seasoned business strategist with over 25 years of experience who leverages her extensive background in investment, digital transformation, and gender-lens funding to scale African startups and indigenous businesses for global impact." },
+  { name: "Funmilayo Ajomale", role: "Board of Directors", sub: "Corporate Commercial Lawyer & Legal Strategist", image: "/funmilayo.jpg", bio: "Astute corporate commercial lawyer and legal strategist with over 20 years of experience who skillfully blends business management with legal expertise to design risk management methodologies, lead highperforming teams, and drive strategic organizational growth." },
 ];
 
 function Home() {
+
+  const [activeDirector, setActiveDirector] = useState<string | null>(null)
+
+
   return (
     <SiteLayout>
       {/* Hero */}
@@ -82,7 +88,7 @@ function Home() {
             </p>
             <div>
               <Link
-                to="/projects"
+                to="/OurCapability"
                 className="inline-flex items-center gap-2 mt-8 bg-primary text-primary-foreground px-6 py-3.5 text-sm font-semibold hover:bg-primary/90 transition-all duration-200"
               >
                 Explore Our Solutions <span aria-hidden>→</span>
@@ -185,32 +191,152 @@ function Home() {
       </section >
 
       {/* Directors */}
-      < section className="px-6 md:px-12 pb-20" >
+      <section className="px-6 md:px-12 pb-24">
         <div className="max-w-[90rem] mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-10">
-            Board of <span className="text-primary">Directors</span>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {directors.map((d) => (
-              <div key={d.name} className="border border-border bg-card overflow-hidden flex py-5 px-7 flex-col">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <p className="text-xs text-primary mb-2 font-semibold uppercase tracking-widest">
+                Executive Leadership
+              </p>
+              <h2 className="text-3xl md:text-5xl font-semibold">
+                Board of <span className="text-primary">Directors</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-base max-w-md">
+              Strategic leadership driving architectural precision, brand excellence, and sustainable enterprise growth.
+            </p>
+          </div>
 
-                <img src={d.image} alt={d.name} className="w-full h-72 object-cover mb-4" />
-                <div className=" flex-1 flex flex-col justify-between">
-                  <div>
-                    <h4 className="font-semibold text-2xl">{d.name}</h4>
-                    <p className="text-primary text-[15px] font-medium mt-1">{d.role}</p>
-                    {d.sub && <p className="text-base text-muted-foreground mt-2 leading-relaxed">{d.sub}</p>}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+            {directors.map((d, index) => {
+              const isActive = activeDirector === d.name;
+              return (
+                <div
+                  key={d.name}
+                  className={`group relative border bg-card transition-all duration-300 ease-out flex flex-col ${isActive
+                    ? "border-primary shadow-xl shadow-primary/10 ring-1 ring-primary/20"
+                    : "border-border hover:border-primary/50 hover:shadow-md"
+                    }`}
+                >
+                  {/* Top accent indicator */}
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-1 bg-primary transition-all duration-300 origin-left z-10 ${isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                      }`}
+                  />
+
+                  {/* Architectural corner markers (BrandMason signature) */}
+                  {isActive && (
+                    <div className="pointer-events-none">
+                      <span className="absolute -top-1 -left-1 h-3 w-3 border-t-2 border-l-2 border-primary z-20" />
+                      <span className="absolute -top-1 -right-1 h-3 w-3 border-t-2 border-r-2 border-primary z-20" />
+                      <span className="absolute -bottom-1 -left-1 h-3 w-3 border-b-2 border-l-2 border-primary z-20" />
+                      <span className="absolute -bottom-1 -right-1 h-3 w-3 border-b-2 border-r-2 border-primary z-20" />
+                    </div>
+                  )}
+
+                  {/* Image container with subtle zoom & badge */}
+                  <div className="relative overflow-hidden aspect-[4/5] bg-muted/30 border-b border-border/60">
+                    <img
+                      src={d.image}
+                      alt={d.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                    {/* Member index chip */}
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2 py-0.5 text-[10px] font-mono font-semibold tracking-wider bg-card/90 backdrop-blur-xs text-foreground/80 border border-border/80 rounded-xs shadow-2xs">
+                        0{index + 1}
+                      </span>
+                    </div>
+
+                    {/* Active pill badge */}
+                    {isActive && (
+                      <div className="absolute top-3 right-3 animate-in fade-in zoom-in-95 duration-200">
+                        <span className="inline-flex items-center px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase bg-primary text-primary-foreground rounded-xs shadow-xs">
+                          Active Bio
+                        </span>
+                      </div>
+                    )}
                   </div>
-                  {/* <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-muted-foreground font-semibold">
-                    <span>READ BIO</span>
-                    <span>+</span>
-                  </div> */}
+
+                  {/* Details & Bio */}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <p className="text-primary text-xs font-semibold uppercase tracking-wider mb-1">
+                        {d.role}
+                      </p>
+                      <h4 className="font-semibold text-2xl tracking-tight text-foreground group-hover:text-primary transition-colors duration-200">
+                        {d.name}
+                      </h4>
+                      <div className="min-h-[42px] mt-2">
+                        {d.sub ? (
+                          <p className="text-sm text-muted-foreground leading-snug line-clamp-2">
+                            {d.sub}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-muted-foreground/60 italic leading-snug">
+                            BrandMason Leadership
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Interactive Toggle Button */}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setActiveDirector((current) => (current === d.name ? null : d.name))
+                      }
+                      aria-expanded={isActive}
+                      className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-xs font-semibold tracking-wider text-muted-foreground hover:text-foreground transition-colors cursor-pointer group/btn"
+                    >
+                      <span className="uppercase font-semibold text-[11px] tracking-wider transition-colors duration-200 group-hover/btn:text-primary">
+                        {isActive ? "Close Bio" : "Read Bio"}
+                      </span>
+                      <span
+                        className={`h-6 w-6 rounded-full border flex items-center justify-center transition-all duration-300 ${isActive
+                          ? "border-primary bg-primary text-primary-foreground rotate-45"
+                          : "border-border bg-muted/40 text-muted-foreground group-hover/btn:border-primary group-hover/btn:text-primary group-hover/btn:bg-primary/10"
+                          }`}
+                      >
+                        <Plus className="h-3.5 w-3.5 transition-transform duration-300" />
+                      </span>
+                    </button>
+
+                    {/* Smooth Collapsible Bio */}
+                    <div
+                      className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${isActive
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                        }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div
+                          className={`pt-4 pb-1 transition-all duration-300 transform ${isActive
+                            ? "translate-y-0 opacity-100"
+                            : "-translate-y-2 opacity-0"
+                            }`}
+                        >
+                          <div className="relative border-l-2 border-primary pl-3.5 py-1.5 bg-primary/[0.03]">
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-1.5">
+                              Executive Biography
+                            </span>
+                            <p className="text-[13.5px] leading-relaxed text-foreground/85 font-normal">
+                              {d.bio}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Future Ready & Responsible Bottom Form Section */}
       < section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20 border-t border-ink-foreground/10" >

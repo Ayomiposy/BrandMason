@@ -30,7 +30,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="w-full border-b border-border/30 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-[90rem] mx-auto w-full px-6 md:px-12 py-5 flex items-center justify-between">
           <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-            <img src="/logo.png" alt="BrandMason" width={80} height={80} className="h-15 w-15 object-contain" />
+            <img
+              src="/logo.png"
+              alt="BrandMason"
+              width={80}
+              height={80}
+              className="h-15 w-15 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,8 +47,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 <Link
                   key={n.to}
                   to={n.to}
-                  className={`text-lg font-medium transition-colors ${active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
-                    }`}
+                  className={`text-lg font-medium transition-colors ${
+                    active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {n.label}
                 </Link>
@@ -73,7 +80,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-0 bottom-0 top-[121px] bg-background/98 backdrop-blur-lg z-40 transition-all duration-300 overflow-y-auto">
+        <div className="md:hidden fixed inset-x-0 bottom-0 top-[100px] bg-background/98 backdrop-blur-lg z-40 transition-all duration-300 overflow-y-auto">
           <nav className="flex flex-col px-6 py-8 gap-5 h-[calc(100vh-121px)] justify-center max-w-md mx-auto">
             {nav.map((n) => {
               const active = pathname === n.to;
@@ -82,8 +89,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   key={n.to}
                   to={n.to}
                   onClick={() => setIsOpen(false)}
-                  className={`text-xl font-medium py-2 border-b border-border/10 transition-colors ${active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
-                    }`}
+                  className={`text-xl font-medium py-2 border-b border-border/10 transition-colors ${
+                    active ? "text-primary font-semibold" : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {n.label}
                 </Link>

@@ -42,7 +42,7 @@ export const Route = createFileRoute("/api/contactService")({
 
           const { data, error } = await resend.emails.send({
             from: "contact@brandmasonlimited.com",
-            to: "georgejoshuaayomiposi@gmail.com",
+            to: "info@brandmasonlimited.com",
             subject: "Brand Mason: Contact Us",
             replyTo: email.trim(),
             text: `Name: ${fullname.trim()} \n\nEmail: ${email.trim()} \n\nMessage: ${message.trim()}`,

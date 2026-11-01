@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Socials } from "@/components/socials";
 import { useState } from "react";
 import { Plus } from "lucide-react";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -94,6 +95,40 @@ const directors = [
 
 function Home() {
   const [activeDirector, setActiveDirector] = useState<string | null>(null);
+  const [form, setForm] = useState({ fullname: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/contactService", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullname: form.fullname,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Failed to connect to api");
+      toast.success("Message sent successfully");
+      setForm({
+        fullname: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to send message. please try again");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <SiteLayout>
@@ -426,13 +461,7 @@ function Home() {
               <p className="text-base text-ink-foreground/60 mb-6">
                 Tell us about your project or share details of your site survey request.
               </p>
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert("Message Sent!");
-                }}
-                className="space-y-4"
-              >
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="text-xs text-ink-foreground/50 uppercase tracking-wider block font-semibold">
                     Full Name
@@ -440,6 +469,8 @@ function Home() {
                   <input
                     required
                     placeholder="Enter your name"
+                    value={form.fullname}
+                    onChange={(e) => setForm({ ...form, fullname: e.target.value })}
                     className="w-full mt-1.5 px-3 py-3.5 border border-ink-foreground/20 bg-ink-foreground/5 text-ink-foreground text-base focus:outline-none focus:border-primary placeholder:text-ink-foreground/30"
                   />
                 </div>
@@ -450,6 +481,8 @@ function Home() {
                   <input
                     required
                     type="email"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder="Enter your email address"
                     className="w-full mt-1.5 px-3 py-3.5 border border-ink-foreground/20 bg-ink-foreground/5 text-ink-foreground text-base focus:outline-none focus:border-primary placeholder:text-ink-foreground/30"
                   />
@@ -462,14 +495,17 @@ function Home() {
                     required
                     rows={4}
                     placeholder="Type here..."
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full mt-1.5 px-3 py-3.5 border border-ink-foreground/20 bg-ink-foreground/5 text-ink-foreground text-base focus:outline-none focus:border-primary resize-none placeholder:text-ink-foreground/30"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground py-3.5 text-base font-semibold hover:bg-primary/95 transition-all duration-200"
+                  disabled={loading}
+                  className="w-full bg-primary text-primary-foreground py-3.5 text-base font-semibold hover:bg-primary/95 transition-all duration-200 cursor-pointer"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>

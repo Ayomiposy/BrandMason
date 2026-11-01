@@ -3,15 +3,21 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Socials } from "@/components/socials";
 
-
 export const Route = createFileRoute("/OurCapability")({
   component: OurCapability,
   head: () => ({
     meta: [
       { title: "Projects — From Blueprint to Built Reality | BrandMason" },
-      { name: "description", content: "Explore BrandMason's project capabilities: spatial transformation, signage, structural execution, experiential design, and brand amplification." },
+      {
+        name: "description",
+        content:
+          "Explore BrandMason's project capabilities: spatial transformation, signage, structural execution, experiential design, and brand amplification.",
+      },
       { property: "og:title", content: "Projects — BrandMason" },
-      { property: "og:description", content: "Bridging creative brand identity and physical, structural execution." },
+      {
+        property: "og:description",
+        content: "Bridging creative brand identity and physical, structural execution.",
+      },
     ],
   }),
 });
@@ -23,7 +29,7 @@ type Tabs = {
   body: string;
   images: { url: string; alt: string }[];
   videoUrl?: string;
-}
+};
 
 const tabs: Tabs[] = [
   {
@@ -31,7 +37,14 @@ const tabs: Tabs[] = [
     label: "Spatial Transformation",
     heading: "Spatial Transformation",
     body: "Space management, corporate interior and exterior branding, and building facades. We transform physical spaces to tell your brand story seamlessly.",
-    images: [{ url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" }, { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" }, { url: "/new-spatial-transformation-3.jpeg", alt: "Spatial Transformation 3" }, { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" }, { url: "/new-spatial-transformation-5.jpeg", alt: "Spatial Transformation 5" }, { url: "/new-spatial-transformation-6.jpeg", alt: "Spatial Transformation 6" }],
+    images: [
+      { url: "/new-spatial-transformation-1.jpeg", alt: "Spatial Transformation" },
+      { url: "/new-spatial-transformation-2.jpeg", alt: "Spatial Transformation 2" },
+      { url: "/new-spatial-transformation-3.jpeg", alt: "Spatial Transformation 3" },
+      { url: "/new-spatial-transformation-4.jpeg", alt: "Spatial Transformation 4" },
+      { url: "/new-spatial-transformation-5.jpeg", alt: "Spatial Transformation 5" },
+      { url: "/new-spatial-transformation-6.jpeg", alt: "Spatial Transformation 6" },
+    ],
     // videoUrl: "/new-spatial-transformation-vid.mp4"
   },
   {
@@ -39,28 +52,53 @@ const tabs: Tabs[] = [
     label: "Signage Solutions",
     heading: "Signage Solutions",
     body: "Architectural signage fabrication, precision installation, signage refurbishment and maintenance across every environment.",
-    images: [{ url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" }, { url: "/new-signage-solution-2.jpg", alt: "Signage Solution image 2" }, { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" }, { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" }, { url: "/new-signage-solution-5.jpeg", alt: "Signage Solution image 5" }, { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" }]
+    images: [
+      { url: "/new-signage-solution-1.jpeg", alt: "Signage Solution image 1" },
+      { url: "/new-signage-solution-2.jpg", alt: "Signage Solution image 2" },
+      { url: "/new-signage-solution-3.jpg", alt: "Signage Solution image 3" },
+      { url: "/new-signage-solution-4.jpeg", alt: "Signage Solution image 4" },
+      { url: "/new-signage-solution-5.jpeg", alt: "Signage Solution image 5" },
+      { url: "/new-signage-solution-6.jpg", alt: "Signage Solution image 6" },
+    ],
   },
   {
     key: "structural",
     label: "Structural Execution",
     heading: "Structural Execution",
     body: "Commercial renovations, specialized construction, and mobile & static kiosk fabrication delivered end-to-end.",
-    images: [{ url: "/structural-execution-1.png", alt: "Structural Execution image 1" }, { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" }, { url: "/structural-execution-3.png", alt: "Structural Execution image 3" }, { url: "/structural-execution-4.png", alt: "Structural Execution image 4" }, { url: "/structural-execution-5.png", alt: "Structural Execution image 5" }, { url: "/structural-execution-6.jpeg", alt: "Structural Execution image 6" }]
+    images: [
+      { url: "/structural-execution-1.png", alt: "Structural Execution image 1" },
+      { url: "/new-structural-execution-2.jpeg", alt: "Structural Execution image 2" },
+      { url: "/structural-execution-3.png", alt: "Structural Execution image 3" },
+      { url: "/structural-execution-4.png", alt: "Structural Execution image 4" },
+      { url: "/structural-execution-5.png", alt: "Structural Execution image 5" },
+      { url: "/structural-execution-6.jpeg", alt: "Structural Execution image 6" },
+    ],
   },
   {
     key: "experiential",
     label: "Experiential Design",
     heading: "Experiential Design",
     body: "Concept design, customized event fabrication, and on-site installation for memorable brand moments.",
-    images: [{ url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" }, { url: "/experimental-design-2.jpeg", alt: "Experiential Design image 2" }, { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" }, { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" }, { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" }, { url: "/experiential-design-6.jpeg", alt: "Experiential Design image 6" }],
+    images: [
+      { url: "/experimental-design-1.jpg", alt: "Experiential Design image 1" },
+      { url: "/experimental-design-2.jpeg", alt: "Experiential Design image 2" },
+      { url: "/experimental-design-3.jpg", alt: "Experiential Design image 3" },
+      { url: "/experimental-design-4.jpeg", alt: "Experiential Design image 4" },
+      { url: "/experimental-design-5.jpg", alt: "Experiential Design image 5" },
+      { url: "/experiential-design-6.jpeg", alt: "Experiential Design image 6" },
+    ],
   },
   {
     key: "amplification",
     label: "Brand Amplification",
     heading: "Brand Amplification",
     body: "Out of Home (OOH) advertising, promotional products, and bespoke corporate gifts that scale your presence.",
-    images: [{ url: "/brand-amplification-1.jpg", alt: "Brand Amplification image 1" }, { url: "/brand-amplification-2.jpg", alt: "Brand Amplification image 2" }, { url: "/brand-amplification-3.jpg", alt: "Brand Amplification image 3" }],
+    images: [
+      { url: "/brand-amplification-1.jpg", alt: "Brand Amplification image 1" },
+      { url: "/brand-amplification-2.jpg", alt: "Brand Amplification image 2" },
+      { url: "/brand-amplification-3.jpg", alt: "Brand Amplification image 3" },
+    ],
     videoUrl: "/new-experimental-design-vid.mp4",
   },
 ] as const;
@@ -71,69 +109,97 @@ function OurCapability() {
   return (
     <SiteLayout>
       {/* Hero */}
-      < section className="px-6 md:px-12 py-30 grid-bg bg-cream-deep/60" >
+      <section className="px-6 md:px-12 py-30 grid-bg bg-cream-deep/60">
         <div className="max-w-[90rem] mx-auto w-full min-h-[300px] flex flex-col justify-center">
           <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] max-w-3xl">
-            From Blueprint to<br />Built Reality
+            From Blueprint to
+            <br />
+            Built Reality
           </h1>
           <p className="mt-6 text-2xl text-foreground/80 max-w-lg">
             Bridging the gap between creative brand identity and physical, structural execution.
           </p>
           <div>
-            <button className="inline-flex items-center gap-2 mt-8 border border-ink px-8 py-4 text-lg font-semibold hover:bg-ink hover:text-ink-foreground transition-all duration-200 cursor-pointer bg-transparent">
+            <a
+              href="/brandMasonProfile.pdf"
+              download="Brand-Mason-Company-Profile.pdf"
+              className="inline-flex items-center gap-2 mt-8 border border-ink px-8 py-4 text-lg font-semibold hover:bg-ink hover:text-ink-foreground transition-all duration-200 cursor-pointer bg-transparent"
+            >
               Request For A Company Profile <span aria-hidden>→</span>
-            </button>
+            </a>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Tabs */}
-      < nav className="px-6 md:px-12 border-b border-border bg-card" >
+      <nav className="px-6 md:px-12 border-b border-border bg-card">
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="flex flex-wrap gap-8">
             {tabs.map((t) => (
               <button
                 key={t.key}
                 onClick={() => setActive(t.key)}
-                className={`py-6 text-xl transition-colors relative cursor-pointer font-medium ${active === t.key ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
-                  }`}
+                className={`py-6 text-xl transition-colors relative cursor-pointer font-medium ${
+                  active === t.key
+                    ? "text-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {t.label}
-                {active === t.key && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />}
+                {active === t.key && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+                )}
               </button>
             ))}
           </div>
         </div>
-      </nav >
+      </nav>
 
       {/* Capability block */}
-      < section className="px-6 md:px-12 py-20" >
+      <section className="px-6 md:px-12 py-20">
         <div className="max-w-[90rem] mx-auto w-full">
           <div className="flex sm:flex-col md:flex-row justify-between gap-10 lg:gap-20 items-start min-h-[220px]">
             <div>
-              <h2 className="text-3xl md:text-5xl font-semibold leading-tight">{current.heading}</h2>
+              <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
+                {current.heading}
+              </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed max-w-sm">{current.body}</p>
             </div>
             <div>
               <div className="flex flex-col gap-5g">
                 <div className="md:col-span-2 grid grid-cols-3 gap-4">
                   {current.images.map((img, i) => (
-                    <img src={img.url} alt={img.alt} key={i} className="aspect-square bg-cream-deep/60 border border-border" />
+                    <img
+                      src={img.url}
+                      alt={img.alt}
+                      key={i}
+                      className="aspect-square bg-cream-deep/60 border border-border"
+                    />
                   ))}
                 </div>
-                {current.videoUrl && <video src={current.videoUrl} className="w-full h-full mt-5" autoPlay loop muted playsInline />}
-
+                {current.videoUrl && (
+                  <video
+                    src={current.videoUrl}
+                    className="w-full h-full mt-5"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                )}
               </div>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* CTA */}
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20" >
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 pt-30 pb-20">
         <div className="max-w-[90rem] mx-auto w-full min-h-[220px] flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl leading-[1.1] max-w-3xl">
-            Have a signage, branding, renovation or construction project?<br />Let's conduct a detailed review.
+            Have a signage, branding, renovation or construction project?
+            <br />
+            Let's conduct a detailed review.
           </h2>
           <div>
             <Link
@@ -144,8 +210,8 @@ function OurCapability() {
             </Link>
           </div>
         </div>
-      </section >
-      < section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10" >
+      </section>
+      <section className="bg-ink text-ink-foreground px-6 md:px-12 py-10 border-ink-foreground/10">
         <Socials />
       </section>
     </SiteLayout>
